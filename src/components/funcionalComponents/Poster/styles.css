@@ -1,0 +1,17 @@
+
+
+.poster {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .poster img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .poster h3 {
+    margin-top: 10px;
+  }
+  

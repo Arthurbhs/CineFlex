@@ -22,6 +22,11 @@
   }
 }
 
+.grid{
+  position: absolute;
+  top:90%
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

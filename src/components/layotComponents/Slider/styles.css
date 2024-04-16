@@ -1,0 +1,66 @@
+/* Carousel.css */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    position: relative;
+    background-color: #151a1d;
+    border-bottom: solid 6px #0054d1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    width: 700px; /* Definindo largura fixa */
+    height: 400px; /* Definindo altura fixa */
+  }
+  
+  .prev-image,
+  .next-image {
+    position: absolute;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    
+  }
+
+  
+  .prev-image {
+    left: -35%;
+  }
+  
+  .next-image {
+    right: -35%;
+  }
+  
+  .carousel:hover .prev-image,
+  .carousel:hover .next-image {
+    opacity: 1;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.5em;
+    z-index: 1;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
