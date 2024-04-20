@@ -1,52 +1,48 @@
-.App {
-  text-align: center;
+html, body {
+  resize: both;
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(31,43,51,1) 26%, rgba(31,43,51,1) 75%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(31,43,51,1) 26%, rgba(31,43,51,1) 75%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(31,43,51,1) 26%, rgba(31,43,51,1) 75%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1); 
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.title{
+  position: relative;
+ 
+  color: rgb(40, 101, 214);
 }
 
-.background{
-  background-color: #1D2327;
-  width: 100vw; /* Define a largura como 100% da largura da viewport */
-  height: 100vh; /* Define a altura como 100% da altura da viewport */
-  display: flex;
-  flex-direction: column;
 
+.poster-grid {
+  position: relative;
+  display: grid;
+  margin-left: 100px;
+  grid-template-columns: repeat(3, 0.3fr); /* Define três colunas com largura igual */
+  top: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.destaque{
+
+  position: relative;
+  
 }
 
-.grid{
-  position: absolute;
-  top:90%
+.destaque   .title{
+  left: 42%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.anime {
+
+  position: relative;
+  margin-top: 400px; /* Desloca o elemento 400px para baixo */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.anime   .title{
+  left: 45%;
 }

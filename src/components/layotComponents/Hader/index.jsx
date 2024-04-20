@@ -1,15 +1,18 @@
-// Header.js
-
-import React from 'react';
+import React, { useState } from 'react';
 import Cineflex from '../../funcionalComponents/Cineflex'
 import './styles.css'
 import Menu from '../../funcionalComponents/Menu';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div className="header"> 
     <div className='menu'>
-    <Menu/>
+    <Menu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
     </div>
     
     <div className='logo'>

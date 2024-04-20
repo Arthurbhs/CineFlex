@@ -1,9 +1,11 @@
 /* Carousel.css */
 
 .carousel {
-    position: relative;
+    position:absolute;
     width: 100%;
     overflow: hidden;
+   
+    
   }
   
   .image-container {
@@ -23,24 +25,35 @@
   .prev-image,
   .next-image {
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.2;
     transition: opacity 0.3s ease-in-out;
     
   }
 
   
   .prev-image {
-    left: -35%;
+    left: -45%;
   }
   
   .next-image {
-    right: -35%;
+    right: -45%;
   }
   
-  .carousel:hover .prev-image,
-  .carousel:hover .next-image {
-    opacity: 1;
+  .carousel:hover .prev-image{
+    animation: deslocamentoPrev 1s ease-in-out 1 forwards; 
   }
+  .carousel:not(:hover) .prev-image{
+    left: -45%;
+    animation: retornoPrev 0.7s ease-in-out 1 forwards; 
+  }
+
+  .carousel:hover .next-image {
+    animation: deslocamentoNext 1s ease-in-out 1 forwards;   }
+    
+    .carousel:not(:hover) .next-image {
+      right: -45%;
+      animation: retornoNext 0.7s ease-in-out 1 forwards;   }
+      
   
   .prev,
   .next {
@@ -63,4 +76,50 @@
   .next {
     right: 0;
   }
-  
+
+  @keyframes deslocamentoNext {
+    0% {
+        rigth: -45%;
+        opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+      right: -35%;
+    }
+}
+
+@keyframes retornoNext {
+  0% {
+    right: -35%;
+    opacity: 1;
+  }
+  100% {
+   
+    opacity: 0.25;
+    rigth: -45%;
+    
+  }
+}
+
+@keyframes deslocamentoPrev {
+  0% {
+    opacity: 0.25;
+      left: -45%;
+  }
+  100% {
+    opacity: 1;
+    left: -35%;
+  }
+}
+@keyframes retornoPrev {
+  0% {
+    left: -35%;
+    opacity: 1;
+  }
+  100% {
+   
+    opacity: 0.25;
+    left: -45%;
+    
+  }
+}
