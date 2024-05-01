@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import { useHistory } from 'react-router-dom';
+
+
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Header from './components/layotComponents/Hader';
 import Carousel from './components/layotComponents/Slider';
@@ -10,19 +10,7 @@ import Footer from './components/layotComponents/footer';
 
 
 
-function App() {
-  const carrosselDestaque = [
-    'https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=1200,height=675,quality=85/catalog/crunchyroll/ea075b926e1073f4eb016bff8cdb434c.jpe',
-     'https://picfiles.alphacoders.com/619/619653.jpeg',
-     'https://wallpapers.com/images/hd/godzilla-in-burning-megacity-41ebbztlwewys2ba.webp' ];
-
-
-  const carrosselAnime = [
-    'https://wallpapers.com/images/hd/dbz-family-cover-hd-hbipkh6loardboa9.webp',
-    'https://wallpapers.com/images/high/naruto-s-friend-1600-x-783-wallpaper-wfu65zzujweb3j16.webp',
-    'https://wallpapers.com/images/high/main-characters-one-piece-pfp-d5n3fs7f6zetendd.webp' ];
-
-
+function Monster() {
 
 
   return (
@@ -31,7 +19,7 @@ function App() {
       <Header />
       <div className='destaque'>
         <h1 className='title'>Em Destaque</h1>
-      <Carousel imagePaths={carrosselDestaque} />
+ 
       <div className="poster-grid">
       <Poster  imageUrl='https://wallpapers.com/images/high/pacific-rim-heroand-jaeger-uidoraw4y9rte8do.webp'  title='Circulo de fogo: Uprising' linkTo='' />
       <Poster  imageUrl='https://wallpapers.com/images/hd/one-piece-straw-hat-pirates-9037850rblb4yq70.webp'  title='One piece' linkTo='' />
@@ -71,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default Monster;
